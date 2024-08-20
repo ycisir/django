@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}">
+    
+    {% block corecss %}
+        <link rel="stylesheet" href="{% static 'myapp/css/core.css' %}">
+    {% endblock corecss %}
+
+    <title>{% block title %} Image Uploader -  {% endblock title %}</title>
+
+</head>
+<body>
+
+    {% block content %}  {% endblock content %}
+
+    <script src="{% static "myapp/js/all.min.js" %}"></script>
+    <script src="{% static "myapp/js/bootstrap.min.js" %}"></script>
+    {% block corejs %}
+        <script src="{% static "myapp/js/core.js" %}"></script>
+    {% endblock corejs %}
+    <script src="{% static "myapp/js/jquery-3.7.1.min.js" %}"></script>
+    <script src="{% static "myapp/js/popper.min.js" %}"></script>
+
+</body>
+</html>
