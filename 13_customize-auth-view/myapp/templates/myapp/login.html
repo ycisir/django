@@ -1,0 +1,20 @@
+{% extends "myapp/base.html" %}
+
+{% block title %} Login {% endblock title %}
+
+
+{% block content %}
+
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{form.non_field_errors}}
+        {% for field in form %}
+            <div class="my-2">
+                {{field.label_tag}} 
+                {{field}}
+                <span class="errorlist">{{field.errors | striptags}}</span>
+            </div>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}

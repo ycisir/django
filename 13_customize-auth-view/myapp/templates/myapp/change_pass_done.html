@@ -1,0 +1,8 @@
+{% extends "myapp/base.html" %}
+
+{% block title %} Change password done {% endblock title %}
+
+{% block content %}
+   <h1>Password change successfully!</h1>
+   <a href="{% url 'dashboard' %}">Back to dashboard</a>
+{% endblock content %}

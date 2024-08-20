@@ -1,0 +1,8 @@
+{% extends "myapp/base.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+    <h1>Home page</h1>
+   <a href="{% url 'login' %}">Login</a>
+{% endblock content %}
