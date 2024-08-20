@@ -1,0 +1,22 @@
+body {
+    background-color: #333;
+    color: #eee;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+th, td {
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.errorlist {
+    list-style-type: none;
+    color: red;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+}

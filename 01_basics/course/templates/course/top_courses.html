@@ -1,0 +1,13 @@
+{% block content %}
+
+<p class="mt-2">Our best courses</p>
+
+<ul>
+    <li><a href="{% url 'python' %}">Python</a></li>
+    <li><a href="{% url 'django' %}">Django</a></li>
+    <li><a href="{% url 'flask' %}">Flask</a></li>
+    {% comment %} <li><a href="#">C++</a></li> {% endcomment %}
+
+</ul>
+
+{% endblock content%}

@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+{% block title %} Student details {% endblock title %}
+
+
+{% block content %}
+    {% for st in std %}
+    <h1 class="mt-3">{{st.id}} details</h1>
+
+    {% endfor %}
+    {% comment %} <p>Session : {{yr}}</p> {% endcomment %}
+
+    <a href="{% url 'students' %}" class="btn btn-secondary">Back to students page</a>
+
+{% endblock content %}

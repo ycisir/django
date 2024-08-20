@@ -1,0 +1,25 @@
+
+{% extends "core/base.html" %}
+{% comment %} {% load cache %} {% endcomment %}
+
+{% block title %} Home page {% endblock title %}
+
+
+{% block content %}
+
+    <h1 class="my-5">Welcome! {{name | capfirst}}<i class="fa-solid fa-lines-leaning"></i></h1>
+    
+    
+    {% comment %} {% cache 30 course %} {% endcomment %}
+    {% include "course/top_courses.html" %}
+    <p>{{stu.name}}</p>
+    <p>{{stu.roll}}</p>
+    {% comment %} {% endcache course %} {% endcomment %}
+    
+    
+
+{% endblock content %}
+
+
+
+    

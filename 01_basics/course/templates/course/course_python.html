@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+{% block corecss %} {{ block.super }}
+    <link rel="stylesheet" href="{% static 'course/css/course.css' %}">
+{% endblock corecss %}
+
+{% block title %} Learn Python {% endblock title %}
+
+{% load static %}
+
+
+{% block content %}
+
+<h3 class="mt-5">Join our {{course | capfirst}} course.</h3>
+<img src="{% static 'course/images/Python.png' %}" alt="Python">
+<form action="">
+    <input type="button" class="btn btn btn-secondary mt-3" value="Click" onclick="disp()" />
+</form>
+
+{% endblock content %}
+
+{% block corejs %} {{ block.super }}
+    <script src="{% static "course/js/course.js" %}"></script>
+{% endblock corejs %}
