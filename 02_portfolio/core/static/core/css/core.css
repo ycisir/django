@@ -1,0 +1,23 @@
+.container-fluid {
+    min-height: 100%;
+}
+
+.img-thumbnail {
+    max-width: 90px;
+}
+
+.nav {
+    background-color: #fff;
+}
+
+.nav a {
+    color: rgba(33, 33, 33, 0.5);
+}
+
+.nav a:hover {
+    color: #333;
+}
+
+.nav a.active {
+    color: #333;
+}
