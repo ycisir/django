@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student informations</title>
+
+    <style>
+        table, th, tr, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <h3>Student informations</h3>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>City</th>
+        <th>Marks</th>
+        <th>Passed Out</th>
+        <th>Admission Date Time</th>
+        {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+            <td>{{student.city}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.pass_out}}</td>
+            <td>{{student.admission_time}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% comment %} Aggregation {% endcomment %}
+    {% comment %} <p>Average: {{avg.marks__avg}}</p>
+    <p>Total: {{total.marks__sum}}</p>
+    <p>Min: {{min.marks__min}}</p>
+    <p>Max: {{max.marks__max}}</p>
+    <p>Count: {{cnt.marks__count}}</p> {% endcomment %}
+
+    
+    {% comment %} for single row {% endcomment %}
+    {% comment %} <table>
+        <h3>Student informations</h3>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>City</th>
+        <th>Marks</th>
+        <th>Passed Out</th>
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+            <td>{{student.city}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.pass_out}}</td>
+        </tr>
+    </table> {% endcomment %}
+</body>
+</html>
