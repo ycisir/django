@@ -1,0 +1,53 @@
+{% extends "myapp/base.html" %}
+<title>{% block title %} {{ block.super }} Page  {% endblock title %}</title>
+
+{% block content %}
+    <table>
+        <h3>All post data</h3>
+        <th>Post Name</th>
+        <th>Post Category</th>
+        <th>Published Date</th>
+        <th>Created by</th>
+        {% for p1 in d1 %}
+            <tr>   
+                <td>{{p1.post_title}}</td>
+                <td>{{p1.post_category}}</td>
+                <td>{{p1.post_publish_date}}</td>
+                <td>{{p1.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Post data filtered by post_publish_date</h3>
+        <th>Post Name</th>
+        <th>Post Category</th>
+        <th>Published Date</th>
+        <th>Created by</th>
+        {% for p1 in d2 %}
+            <tr>   
+                <td>{{p1.post_title}}</td>
+                <td>{{p1.post_category}}</td>
+                <td>{{p1.post_publish_date}}</td>
+                <td>{{p1.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Post data filtered by username</h3>
+        <th>Post Name</th>
+        <th>Post Category</th>
+        <th>Published Date</th>
+        <th>Created by</th>
+        {% for p1 in d3 %}
+            <tr>   
+                <td>{{p1.post_title}}</td>
+                <td>{{p1.post_category}}</td>
+                <td>{{p1.post_publish_date}}</td>
+                <td>{{p1.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock content %}

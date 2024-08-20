@@ -1,0 +1,47 @@
+{% extends "myapp/base.html" %}
+<title>{% block title %} {{ block.super }} Page  {% endblock title %}</title>
+
+{% block content %}
+    <table>
+        <h3>All song data</h3>
+        <th>Song Name</th>
+        <th>Duration</th>
+        <th>Writer</th>
+        {% for s1 in d1 %}
+            <tr>   
+                <td>{{s1.song_name}}</td>
+                <td>{{s1.song_duration}}</td>
+                <td>{{s1.written_by}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Dong data filtered by song_duration</h3>
+        <th>Song Name</th>
+        <th>Duration</th>
+        <th>Writer</th>
+        {% for s1 in d2 %}
+            <tr>   
+                <td>{{s1.song_name}}</td>
+                <td>{{s1.song_duration}}</td>
+                <td>{{s1.written_by}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Dong data filtered by written_byname</h3>
+        <th>Song Name</th>
+        <th>Duration</th>
+        <th>Writer</th>
+        {% for s1 in d3 %}
+            <tr>   
+                <td>{{s1.song_name}}</td>
+                <td>{{s1.song_duration}}</td>
+                <td>{{s1.written_by}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock content %}

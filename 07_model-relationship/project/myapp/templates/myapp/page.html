@@ -1,0 +1,53 @@
+{% extends "myapp/base.html" %}
+<title>{% block title %} {{ block.super }} Page  {% endblock title %}</title>
+
+{% block content %}
+    <table>
+        <h3>All pages data</h3>
+        <th>Page Name</th>
+        <th>Page Category</th>
+        <th>Published Date</th>
+        <th>Created by</th>
+        {% for p1 in d1 %}
+            <tr>   
+                <td>{{p1.page_name}}</td>
+                <td>{{p1.page_category}}</td>
+                <td>{{p1.page_publish_date}}</td>
+                <td>{{p1.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Pages data filtered by page_category</h3>
+        <th>Page Name</th>
+        <th>Page Category</th>
+        <th>Published Date</th>
+        <th>Created by</th>
+        {% for p1 in d2 %}
+            <tr>   
+                <td>{{p1.page_name}}</td>
+                <td>{{p1.page_category}}</td>
+                <td>{{p1.page_publish_date}}</td>
+                <td>{{p1.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <h3>Pages data filtered by email</h3>
+        <th>Page Name</th>
+        <th>Page Category</th>
+        <th>Published Date</th>
+        <th>Created by</th>
+        {% for p1 in d3 %}
+            <tr>   
+                <td>{{p1.page_name}}</td>
+                <td>{{p1.page_category}}</td>
+                <td>{{p1.page_publish_date}}</td>
+                <td>{{p1.user}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock content %}
