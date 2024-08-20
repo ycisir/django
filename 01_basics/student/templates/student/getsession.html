@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+{% block title %} Get session  {% endblock title %}
+
+{% block content %}
+
+    <h3 class="mt-5">Get session...</h3>
+    {{name}} <br>
+    {{request.session.get_session_cookie_age}} <br>
+    {{request.session.get_expiry_age}} <br>
+    {{request.session.get_expiry_date}} <br>
+    {% comment %} {% for key in keys %}
+        {{key}}
+    {% endfor %}
+    <hr>
+    {% for item in items %}
+        {{item}}
+    {% endfor %}
+    <hr>
+    {% for key, value in items %}
+        {{key}} : {{value}} <br>
+    {% endfor %}
+    {{age}} {% endcomment %}
+
+
+{% endblock content %}

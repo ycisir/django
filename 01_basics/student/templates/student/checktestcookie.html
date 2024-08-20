@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+{% block title %} Check Test cookie  {% endblock title %}
+
+{% block content %}
+
+    <h3 class="mt-5">Check Test cookie</h3>
+    {{request.session.test_cookie_worked}}
+  
+
+
+{% endblock content %}
